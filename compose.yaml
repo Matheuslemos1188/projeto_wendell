@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_DB: airsoft
+      POSTGRES_USER: airsoft
+      POSTGRES_PASSWORD: airsoft_local
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - airsoft_postgres:/var/lib/postgresql
+volumes:
+  airsoft_postgres:
